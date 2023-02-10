@@ -1,3 +1,57 @@
-<div class="container">
+<div [hidden]="submitted" class="container">
     <h1>Pagina de registro</h1>
+    {{model|json}}
+    <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+        <div class="form-group">
+            <label for="firstName">Nombre</label>
+            <input type="text" class="form-control" name="firstName" id="firstName"
+            #firstName="ngModel"
+            required
+            [(ngModel)]="model.firstName">
+            <div [hidden]="firstName.valid || firstName.pristine" 
+            class="alert alert-danger">El nombre es requrido</div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Apellidos</label>
+            <input type="text" class="form-control" name="lastName" id="lastName"
+            #lastName="ngModel"
+            required
+            [(ngModel)]="model.lastName">
+            <div [hidden]="lastName.valid || lastName.pristine" 
+            class="alert alert-danger">El apellido es requrido</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email"
+            #email="ngModel"
+            required
+            [(ngModel)]="model.email">
+            <div [hidden]="email.valid || email.pristine" 
+            class="alert alert-danger">El email es requrido</div>
+        </div>
+        <div class="form-group">
+            <label for="size">Talla de Camiseta</label>
+            <select class="form-control" name="size" id="size"
+            #size="ngModel"
+            required
+            [(ngModel)]="model.size">
+                <option *ngFor="let size of sizes" [value]="size">{{size}}</option>
+            </select>
+            <div [hidden]="size.valid || size.pristine" 
+            class="alert alert-danger">La talla es requrida</div>
+        </div>
+        <div class="form-group">
+            <label for="running-club">Club de Running</label>
+            <input type="text" class="form-control" name="running-club" id="running-club"
+            #runningClub="ngModel"
+            [(ngModel)]="model.runningClub">
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+        <button type="button" class="btn btn-secondary">Nueva Persona</button>
+        <button type="button" class="btn btn-secondary" (click)="newPerson();">Nueva Persona</button>
+        <button type="button" class="btn btn-secondary" (click)="personForm.reset();">Reset</button>
+        <button type="button" class="btn btn-secondary" (click)="newPerson();personForm.reset();">Nueva Persona y Reset</button>
+        <button type="submit" class="btn btn-success" [disabled]="!personForm.form.valid">Enviar</button>
+
+    </form>
 </div>

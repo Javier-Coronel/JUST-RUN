@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Person } from './person.model';
 
 @Component({
   selector: 'app-registration',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent {
-
+  sizes = ['XS','S','M','L','XL'];
+  model = new Person(1,"Javier", "Coronel Ortiz", "j.coronelortiz@gmail.com", this.sizes[2]);
+  submitted = false;
+  onSubmit(){this.submitted=true;}
+  newPerson(){
+    this.model= new Person(2,"","","","");
+  };
 }
