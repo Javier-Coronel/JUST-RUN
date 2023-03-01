@@ -1,0 +1,14 @@
+.event-card {
+    max-width: 400px;
+  }
+  
+  .event-card-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  
+  .events-list{
+    overflow-y: scroll;
+    background-color: #AED581;
+    height: 65em;
+  }

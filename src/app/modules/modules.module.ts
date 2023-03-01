@@ -5,7 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { CoreModule } from '../core/core.module';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { CoreModule } from '../core/core.module';
   imports: [
     CommonModule,
     FormsModule,
-    CoreModule
+    CoreModule,
+    MatFormFieldModule,
+    MatCardModule,
   ],
   exports: [
   ]
