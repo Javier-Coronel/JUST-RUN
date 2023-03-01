@@ -7,13 +7,15 @@ import { LoginComponent } from './login/login.component';
 import { CoreModule } from '../core/core.module';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
+import { RegistroUsuariosAnonimoComponent } from './registro-usuarios-anonimo/registro-usuarios-anonimo.component';
 
 
 @NgModule({
   declarations: [
     RegistrationComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroUsuariosAnonimoComponent
   ],
   imports: [
     CommonModule,
