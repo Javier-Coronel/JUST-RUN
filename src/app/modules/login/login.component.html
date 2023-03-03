@@ -1,49 +1,51 @@
-<div id="loginBody" class="container d-flex flex-column justify-content-evenly align-items-center align-self-center">
 
-<!-- 
-    Titulo login
- -->
+    <div id="loginBody" class="w-100 h-100 container-fluid d-flex flex-column justify-content-evenly align-items-center">
 
-    <h1 class="row">LOGIN</h1>
-
-<!-- 
-    Fila de la parte del input de usuario y contraseña
- -->
-    <div class="container d-flex justify-content-center row">
-        <div class="container d-flex flex-column justify-content-around col-2">
-            <label class="text-center">Contraseña</label>
-            <label class="text-center">Nombre o correo electrónico</label>
-        </div> 
-
-        <div class="container d-flex flex-column justify-content-center col-10">
-            <mat-form-field appearance="outline">
-                <mat-label>Outline form field</mat-label>
-                <input class="w-100" matInput placeholder="Usuario">
-                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Outline form field</mat-label>
-                <input class="w-100" matInput placeholder="Contraseña">
-                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
-            </mat-form-field>
-            
-        </div>       
-    </div>
-
-    <!--  
-        Apartado, se te ha olvidado la contraseña
-    -->
-
-    <p class="row"><strong>¿ Se te ha olvidado la contraseña ?</strong></p>
+        <!-- 
+            Titulo login
+         -->
         
-    <!-- 
-        Botones volver y login
-     -->
-    <div class="container d-flex justify-content-evenly">
+            <h1 >LOGIN</h1>
+        
+        <!-- 
+            Fila de la parte del input de usuario y contraseña
+         -->
+            <div class="container d-flex justify-content-center">
+                <div class="container d-flex flex-column justify-content-around col-2">
+                    <label class="text-center">Nombre o correo electrónico</label>
+                    <label class="text-center">Contraseña</label>
+                </div> 
+        
+                <div class="container d-flex flex-column justify-content-center col-10">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Outline form field</mat-label>
+                        <input class="w-100" matInput placeholder="Usuario">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Outline form field</mat-label>
+                        <input class="w-100" matInput placeholder="Contraseña">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
+                    </mat-form-field>
+                    
+                </div>       
+            </div>
+        
+            <!--  
+                Apartado, se te ha olvidado la contraseña
+            -->
+        
+            <a style="color: black;" href=""><strong>¿ Se te ha olvidado la contraseña ?</strong></a>
+                
+            <!-- 
+                Botones volver y login
+             -->
+            <div class="container d-flex justify-content-evenly">
+        
+                <a  mat-raised-button color="primary">Cerrar</a>
+                <a  mat-raised-button color="primary">Login</a>
+        
+            </div>
+            
+        </div>
 
-        <a  mat-raised-button color="primary">Cerrar</a>
-        <a  mat-raised-button color="primary">Login</a>
-
-    </div>
-    
-</div>
