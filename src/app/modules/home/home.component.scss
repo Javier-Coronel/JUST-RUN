@@ -1,14 +1,32 @@
 .event-card {
-    max-width: 400px;
+    max-width: 21em;
+    max-height: 33em;
   }
   
   .event-card-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
+
+  img{
+    width: 16em;
+    margin: auto;
+  }
   
   .events-list{
     overflow-y: scroll;
     background-color: #AED581;
-    height: 65em;
+    height: 35em;
+  }
+
+  mat-card-subtitle{
+    max-width: fit-content;
+  }
+
+  p{
+    font-size: 0.75em;
+  }
+
+  button{
+    font-size: 0.7em;
   }
