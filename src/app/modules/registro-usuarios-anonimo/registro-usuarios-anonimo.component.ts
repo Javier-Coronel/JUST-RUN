@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class RegistroUsuariosAnonimoComponent {
   Tallas=['XS','S','M','L','XL'];
+  Metodos=['Tarjeta','Paypal','Transferencia']
   submitted=false;
   onSubmit(){this.submitted=true;}
 }

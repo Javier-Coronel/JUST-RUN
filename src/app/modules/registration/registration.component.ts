@@ -8,10 +8,11 @@ import { Person } from './person.model';
 })
 export class RegistrationComponent {
   sizes = ['XS','S','M','L','XL'];
-  model = new Person(1,"Javier", "Coronel Ortiz", "j.coronelortiz@gmail.com", this.sizes[2]);
+  Metodos=['Tarjeta','Paypal','Transferencia']
   submitted = false;
+  model= new Person(2,"","","","","","","","");
   onSubmit(){this.submitted=true;}
   newPerson(){
-    this.model= new Person(2,"","","","");
+    this.model= new Person(2,"","","","","","","","");
   };
 }

@@ -1,0 +1,39 @@
+#registration{
+    background-color: #A8ECC5;
+}
+.ng-valid[required], .ng-valid.required{
+    border-left: 5px solid #42A948;
+}
+.ng-invalid:not(form){
+    border-left: 5px solid #A94442;
+}
+h1{
+    text-align: center;
+}
+#botones{
+    text-align: right;
+}
+#botones>*{
+    margin-left: 3%;
+}
+.form-group *{
+    display: inline;
+}
+.form-control{
+    width: 74%;
+}
+form{
+    width: 100%;
+    overflow: hidden;
+}
+.label{
+    width: 26%;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+label{
+    font-weight: bold;
+    padding-right: 10%;
+    padding-left: 10%;
+}

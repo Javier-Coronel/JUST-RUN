@@ -1,39 +1,53 @@
-<p>registro-usuarios-anonimo works!</p>
-<div class="container">
-    <h1>Registrar una nueva cuenta</h1>
-    <form ><!--(ngSubmit)="onSubmit()"-->
-        <div class="form-group">
-            <label for="DNI">DNI:</label>
-            <input type="text" class="form-control" name="DNI" id="DNI">
-        </div>
-        <div class="form-group">
-            <label for="Nombre">Nombre:</label>
-            <input type="text" class="form-control" name="Nombre" id="Nombre">
-        </div>
-        <div class="form-group">
-            <label for="Apellidos">Apellidos:</label>
-            <input type="text" class="form-control" name="Apellidos" id="Apellidos">
-        </div>
-        <div class="form-group">
-            <label for="Email">Correo Electronico:</label>
-            <input type="text" class="form-control" name="Email" id="Email">
-        </div>
-        <div class="form-group">
-            <label for="Club">Club de Running</label>
-            <input type="text" class="form-control" name="Club" id="Club">
-        </div>
-        <div class="form-group">
-            <label for="Talla">Talla de camiseta</label>
-            <select class="form-control" name="Talla" id="Talla"
-            required>
-                <option *ngFor="let Talla of Tallas" [value]="Talla">{{Talla}}</option>
-            </select> 
-        </div>
-        <div class="form-group">
-            <label for="MetodoPago">Método de pago</label>
-            <input type="text" class="form-control" name="MetodoPago" id="MetodoPago">
-        </div>
-        <button>Volver</button>
-        <button>Enviar</button>
-    </form>
+<div [hidden]="submitted" id="registration"
+  class="w-100 h-100 container-fluid d-flex flex-column justify-content-evenly align-items-center">
+  <h1>Registrarse en un evento</h1>
+
+  <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+    <div class="form-group d-flex">
+      <div class="label">
+        <label for="Nombre">Nombre:</label></div>
+      <input type="text" class="form-control mr-auto p-2" name="Nombre" id="Nombre" required>
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label for="Apellidos">Apellidos:</label></div>
+      <input type="text" class="form-control mr-auto p-2" name="Apellidos" id="Apellidos" required>
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label for="DNI">DNI:</label></div>
+      <input type="text" class="form-control mr-auto p-2" name="DNI" id="DNI" required>
+      <!--#DNI="ngModel"-->
+
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label for="Direccion">Dirección:</label></div>
+      <input type="text" class="form-control mr-auto p-2" name="Direccion" id="Direccion">
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label for="Club">Club de Running:</label></div>
+      <input type="text" class="form-control mr-auto p-2" name="Club" id="Club">
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label for="Talla">Talla de camiseta:</label></div>
+      <select class="form-control mr-auto p-2" name="Talla" id="Talla" required>
+        <option *ngFor="let Talla of Tallas" [value]="Talla">{{Talla}}</option>
+      </select>
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label for="MetodoPago">Método de pago:</label>
+      </div>
+      <select class="form-control mr-auto p-2" name="MetodoPago" id="MetodoPago" required>
+        <option *ngFor="let Metodo of Metodos" [value]="Metodo">{{Metodo}}</option>
+      </select>
+    </div>
+    <div id="botones">
+      <button type="submit" class="btn btn-success">Volver</button>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </div>
+  </form>
 </div>

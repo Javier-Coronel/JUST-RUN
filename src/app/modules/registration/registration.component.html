@@ -1,57 +1,70 @@
-<div [hidden]="submitted" class="container">
-    <h1>Pagina de registro</h1>
-    {{model|json}}
-    <form (ngSubmit)="onSubmit()" #personForm="ngForm">
-        <div class="form-group">
-            <label for="firstName">Nombre</label>
-            <input type="text" class="form-control" name="firstName" id="firstName"
-            #firstName="ngModel"
-            required
-            [(ngModel)]="model.firstName">
-            <div [hidden]="firstName.valid || firstName.pristine" 
-            class="alert alert-danger">El nombre es requrido</div>
-        </div>
-        <div class="form-group">
-            <label for="lastName">Apellidos</label>
-            <input type="text" class="form-control" name="lastName" id="lastName"
-            #lastName="ngModel"
-            required
-            [(ngModel)]="model.lastName">
-            <div [hidden]="lastName.valid || lastName.pristine" 
-            class="alert alert-danger">El apellido es requrido</div>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" name="email" id="email"
-            #email="ngModel"
-            required
-            [(ngModel)]="model.email">
-            <div [hidden]="email.valid || email.pristine" 
-            class="alert alert-danger">El email es requrido</div>
-        </div>
-        <div class="form-group">
-            <label for="size">Talla de Camiseta</label>
-            <select class="form-control" name="size" id="size"
-            #size="ngModel"
-            required
-            [(ngModel)]="model.size">
-                <option *ngFor="let size of sizes" [value]="size">{{size}}</option>
-            </select>
-            <div [hidden]="size.valid || size.pristine" 
-            class="alert alert-danger">La talla es requrida</div>
-        </div>
-        <div class="form-group">
-            <label for="running-club">Club de Running</label>
-            <input type="text" class="form-control" name="running-club" id="running-club"
-            #runningClub="ngModel"
-            [(ngModel)]="model.runningClub">
-        </div>
-        <button type="submit" class="btn btn-success">Enviar</button>
-        <button type="button" class="btn btn-secondary">Nueva Persona</button>
-        <button type="button" class="btn btn-secondary" (click)="newPerson();">Nueva Persona</button>
-        <button type="button" class="btn btn-secondary" (click)="personForm.reset();">Reset</button>
-        <button type="button" class="btn btn-secondary" (click)="newPerson();personForm.reset();">Nueva Persona y Reset</button>
-        <button type="submit" class="btn btn-success" [disabled]="!personForm.form.valid">Enviar</button>
+<div [hidden]="submitted" id="registration"
+  class="w-100 h-100 container-fluid d-flex flex-column justify-content-evenly align-items-center">
+  <h1>Registrar una nueva cuenta</h1>
 
-    </form>
+  <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+    <div class="form-group d-flex">
+      <div class="label">
+        <label class="p-2" for="firstName">Nombre:</label>
+      </div>
+      <input type="text" class="form-control mr-auto p-2" name="name" id="name" #name="ngModel" required
+        [(ngModel)]="model.name">
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label class="p-2" for="lastName">DNI:</label>
+      </div>
+      <input type="text" class="form-control mr-auto p-2" name="lastName" id="lastName" #dni="ngModel" required
+        [(ngModel)]="model.dni">
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label class="p-2" for="email">Email:</label>
+      </div>
+      <input type="email" class="form-control mr-auto p-2" name="email" id="email" #email="ngModel" required
+        [(ngModel)]="model.email">
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label class="p-2" for="running-club">Contraseña:</label>
+      </div>
+      <input type="password" class="form-control mr-auto p-2" name="password" id="password" #password="ngModel" required
+        [(ngModel)]="model.password">
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label class="p-2" for="running-club">Repetir contraseña:</label>
+      </div>
+      <input type="password" class="form-control mr-auto p-2" name="confirmPassword" id="confirmPassword"
+        #confirmPassword="ngModel" required [(ngModel)]="model.confirmPassword">
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label class="p-2" for="running-club">Club de Running:</label>
+      </div>
+      <input type="text" class="form-control mr-auto p-2" name="running-club" id="running-club" #runningClub="ngModel"
+        [(ngModel)]="model.runningClub">
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label class="p-2" for="size">Talla de Camiseta:</label>
+      </div>
+      <select class="form-control mr-auto p-2" name="size" id="size" #size="ngModel" required [(ngModel)]="model.size">
+        <option *ngFor="let size of sizes" [value]="size">{{size}}</option>
+      </select>
+    </div>
+    <div class="form-group d-flex">
+      <div class="label">
+        <label class="p-2" for="MetodoPago">Método de pago:</label>
+      </div>
+      <select class="form-control mr-auto p-2" name="MetodoPago" id="MetodoPago" #payMode="ngModel" required
+        [(ngModel)]="model.payMode">
+        <option *ngFor="let Metodo of Metodos" [value]="Metodo">{{Metodo}}</option>
+      </select>
+    </div>
+    <div id="botones">
+      <button type="submit" class="btn btn-success">Volver</button>
+      <button type="submit" class="btn btn-success" [disabled]="!personForm.form.valid">Crear</button>
+    </div>
+  </form>
 </div>
