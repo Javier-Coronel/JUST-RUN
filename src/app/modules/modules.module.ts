@@ -10,6 +10,7 @@ import {MatCardModule} from '@angular/material/card';
 import { RegistroUsuariosAnonimoComponent } from './registro-usuarios-anonimo/registro-usuarios-anonimo.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatIconModule} from '@angular/material/icon';
+import { EventCardComponent } from './event-card/event-card.component';
 
 
 
@@ -19,7 +20,8 @@ import {MatIconModule} from '@angular/material/icon';
     RegistrationComponent,
     HomeComponent,
     LoginComponent,
-    RegistroUsuariosAnonimoComponent
+    RegistroUsuariosAnonimoComponent,
+    EventCardComponent
   ],
   imports: [
     CommonModule,
