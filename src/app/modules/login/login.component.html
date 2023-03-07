@@ -1,7 +1,7 @@
         <!-- 
             Fila de la parte del input de usuario y contraseña
          -->
-         <form id="loginBody" class="w-100 h-100 container-fluid d-flex flex-column justify-content-evenly align-items-center">
+         <div  id="loginBody" class="w-100 h-100 container-fluid d-flex flex-column justify-content-evenly align-items-center">
             
             <!-- 
             Titulo login
@@ -11,19 +11,19 @@
         
             <div class="container d-flex justify-content-center">
                 <div class="container d-flex flex-column justify-content-around col-2">
-                    <label for="username" class="text-center"><strong>Nombre o correo electrónico</strong></label>
-                    <label for="password" class="text-center"><strong>Contraseña</strong></label>
+                    <mat-label for="username" class="text-center"><strong>Nombre o correo electrónico</strong></mat-label>
+                    <mat-label for="password" class="text-center"><strong>Contraseña</strong></mat-label>
                 </div> 
         
-                <div class="container d-flex flex-column justify-content-center col-10">
-                    <mat-form-field appearance="outline">
-                        <input #username="ngModel" required [(ngModel)]="model.username" id="username" class="w-100" matInput placeholder="Usuario">
+                <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="container d-flex flex-column justify-content-center col-10">
+                    <mat-form-field  appearance="outline">
+                        <input matNativeControl name="username" #username="ngModel" required [(ngModel)]="model.username" id="username" class="w-100" matInput placeholder="Usuario">
                     </mat-form-field>
                     <mat-form-field appearance="outline">
-                        <input #password = "ngModel" [(ngModel)]="model.password" id="password" type="password" class="w-100" matInput placeholder="Contraseña"> 
+                        <input name="password" #password = "ngModel" [(ngModel)]="model.password" id="password" type="password" class="w-100" matInput placeholder="Contraseña"> 
                     </mat-form-field>
                     
-                </div>       
+                </form>       
             </div>
 
             <!--  
@@ -40,11 +40,11 @@
             <div class="container d-flex justify-content-evenly">
         
                 <a href="" class="p-4 fs-4" mat-raised-button style="background-color: #B6E388;">Volver</a>
-                <a href="" class="p-4 fs-4 " mat-raised-button style="background-color: #FFF69B;" >Login</a>
+                <a  type="submit" class="p-4 fs-4 " mat-raised-button style="background-color: #FFF69B;" >Login</a>
         
             </div>
         
-         </form>
+         </div>
             
             
         
