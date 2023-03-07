@@ -8,14 +8,14 @@
         <label class="p-2" for="firstName">Nombre:</label>
       </div>
       <input type="text" class="form-control mr-auto p-2" name="name" id="name" #name="ngModel" required
-        [(ngModel)]="model.name">
+        [(ngModel)]="model.name" pattern="([A-Z]|Ñ)([a-z]|ñ)*( ([A-Z]|Ñ)([a-z]|ñ)*)+">
     </div>
     <div class="form-group d-flex">
       <div class="label">
         <label class="p-2" for="dni">DNI:</label>
       </div>
       <input type="text" class="form-control mr-auto p-2" name="dni" id="dni" #dni="ngModel" required
-        [(ngModel)]="model.dni">
+        [(ngModel)]="model.dni" pattern="[XYZ]|\d\d{7}[TRWAGMYFPDXBNJZSQVHLCKE]">
     </div>
     <div class="form-group d-flex">
       <div class="label">
@@ -43,7 +43,7 @@
         <label class="p-2" for="running-club">Club de Running:</label>
       </div>
       <input type="text" class="form-control mr-auto p-2" name="running-club" id="running-club" #runningClub="ngModel"
-        [(ngModel)]="model.runningClub">
+        [(ngModel)]="model.runningClub" pattern="((([A-Z]|Ñ)([a-z]|ñ)*) ?)+">
     </div>
     <div class="form-group d-flex">
       <div class="label">
