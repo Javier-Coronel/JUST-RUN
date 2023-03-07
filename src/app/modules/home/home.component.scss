@@ -2,41 +2,19 @@
   margin-top: -2em;
 }
 
+.events-list{
+  overflow-y: scroll;
+  background-color: #AED581;
+  height: 26em;
+  max-width: fit-content;
+}
+
+#events_filter{
+  width: 102%;
+  margin-left: -0.8em;
+}
+
 .event-card {
-    max-width: 17.5em;
-    height: 24em;
-  }
-
-  #events_filter{
-    width: 102%;
-    margin-left: -0.8em;
-  }
-  
-  .event-card-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
-
-  img{
-    width: 10em;
-    margin: auto;
-  }
-  
-  .events-list{
-    overflow-y: scroll;
-    background-color: #AED581;
-    height: 26em;
-    max-width: fit-content;
-  }
-
-  mat-card-subtitle{
-    max-width: fit-content;
-  }
-
-  p{
-    font-size: 0.6em;
-  }
-
-  button, a{
-    font-size: 0.7em;
-  }
+  max-width: 18.5em;
+  height: 24em;
+}
