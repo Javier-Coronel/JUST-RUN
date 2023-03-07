@@ -9,6 +9,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import { RegistroUsuariosAnonimoComponent } from './registro-usuarios-anonimo/registro-usuarios-anonimo.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatFormFieldModule,
     MatCardModule,
     MatButtonToggleModule,
+    MatIconModule
   ],
   exports: [
   ]

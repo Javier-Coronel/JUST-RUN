@@ -1,42 +1,39 @@
-
-    <div id="loginBody" class="w-100 h-100 container-fluid d-flex flex-column justify-content-evenly align-items-center">
-
-        <!-- 
-            Titulo login
-         -->
-        
-            <h1 >LOGIN</h1>
-        
         <!-- 
             Fila de la parte del input de usuario y contraseña
          -->
+         <form id="loginBody" class="w-100 h-100 container-fluid d-flex flex-column justify-content-evenly align-items-center">
+            
+            <!-- 
+            Titulo login
+            -->
+
+            <h1 >LOGIN</h1>
+        
             <div class="container d-flex justify-content-center">
                 <div class="container d-flex flex-column justify-content-around col-2">
-                    <label class="text-center"><strong>Nombre o correo electrónico</strong></label>
-                    <label class="text-center"><strong>Contraseña</strong></label>
+                    <label for="username" class="text-center"><strong>Nombre o correo electrónico</strong></label>
+                    <label for="password" class="text-center"><strong>Contraseña</strong></label>
                 </div> 
         
                 <div class="container d-flex flex-column justify-content-center col-10">
                     <mat-form-field appearance="outline">
-                        <mat-label>Outline form field</mat-label>
-                        <input class="w-100" matInput placeholder="Usuario">
-                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <input #username="ngModel" required [(ngModel)]="model.username" id="username" class="w-100" matInput placeholder="Usuario">
                     </mat-form-field>
                     <mat-form-field appearance="outline">
-                        <mat-label>Outline form field</mat-label>
-                        <input class="w-100" matInput placeholder="Contraseña">
-                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
+                        <input #password = "ngModel" [(ngModel)]="model.password" id="password" type="password" class="w-100" matInput placeholder="Contraseña"> 
                     </mat-form-field>
                     
                 </div>       
             </div>
-        
+
             <!--  
                 Apartado, se te ha olvidado la contraseña
             -->
-        
+
+            
             <a style="color: black;" href="https://support.google.com/chrome/answer/95606?hl=ES&ref_topic=7439541"><strong>¿ Se te ha olvidado la contraseña ?</strong></a>
-                
+
+
             <!-- 
                 Botones volver y login
              -->
@@ -46,6 +43,14 @@
                 <a href="" class="p-4 fs-4 " mat-raised-button style="background-color: #FFF69B;" >Login</a>
         
             </div>
+        
+         </form>
             
-        </div>
+            
+        
+                
+        
+          
+            
+       
 
