@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Person } from './registro.model';
+import { Person } from './registration.model';
 
 @Component({
   selector: 'app-registro-usuarios-anonimo',

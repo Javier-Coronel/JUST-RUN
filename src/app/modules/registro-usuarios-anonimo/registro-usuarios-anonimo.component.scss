@@ -1,5 +1,6 @@
 #registration{
     background-color: #A8ECC5;
+    width: 90% !important;
 }
 .ng-valid[required], .ng-valid.required{
     border-left: 5px solid #42A948;
@@ -14,23 +15,31 @@ h1{
     width: 100%;
 }
 #botones>*{
-    margin-right: 15%;
+    margin-right: 10%;
     display: inline;
 }
 #botones>button{
     padding-left: 5%;
     padding-right: 5%;
-
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+#botones p a{
+    color: #000;
 }
 .form-group *{
     display: inline;
 }
 .form-control{
     width: 74%;
+    padding: 4px !important;
 }
 form{
     width: 100%;
     overflow: hidden;
+}
+form>*{
+    margin-bottom: 1%;
 }
 .label{
     width: 26%;
