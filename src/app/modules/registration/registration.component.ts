@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Person } from './person.model';
+import { Person } from './registration.model';
 
 @Component({
   selector: 'app-registration',
@@ -10,7 +10,7 @@ export class RegistrationComponent {
   sizes = ['XS','S','M','L','XL'];
   Metodos=['Tarjeta','Paypal','Transferencia']
   submitted = false;
-  model= new Person(2,"","","","","","","","");
+  model= new Person(1,"","","","","","","","");
   onSubmit(){this.submitted=true;}
   newPerson(){
     this.model= new Person(2,"","","","","","","","");

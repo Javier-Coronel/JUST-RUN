@@ -5,49 +5,57 @@
   <form (ngSubmit)="onSubmit()" #personForm="ngForm">
     <div class="form-group d-flex">
       <div class="label">
-        <label for="Nombre">Nombre:</label></div>
-      <input type="text" class="form-control mr-auto p-2" name="Nombre" id="Nombre" required>
+        <label class="p-2" for="Nombre">Nombre:</label></div>
+      <input type="text" class="form-control mr-auto p-2" name="Nombre" id="Nombre" #name="ngModel" required
+        [(ngModel)]="model.name">
     </div>
     <div class="form-group d-flex">
       <div class="label">
-        <label for="Apellidos">Apellidos:</label></div>
-      <input type="text" class="form-control mr-auto p-2" name="Apellidos" id="Apellidos" required>
+        <label class="p-2" for="lastName">Apellidos:</label></div>
+      <input type="text" class="form-control mr-auto p-2" name="lastName" id="lastName" #lastName="ngModel" required
+        [(ngModel)]="model.lastName">
     </div>
     <div class="form-group d-flex">
       <div class="label">
-        <label for="DNI">DNI:</label></div>
-      <input type="text" class="form-control mr-auto p-2" name="DNI" id="DNI" required>
+        <label class="p-2" for="dni">DNI:</label></div>
+      <input type="text" class="form-control mr-auto p-2" name="dni" id="dni" #dni="ngModel" required
+        [(ngModel)]="model.dni">
       <!--#DNI="ngModel"-->
 
     </div>
     <div class="form-group d-flex">
       <div class="label">
-        <label for="Direccion">Dirección:</label></div>
-      <input type="text" class="form-control mr-auto p-2" name="Direccion" id="Direccion">
+        <label class="p-2" for="direccion">Dirección:</label></div>
+      <input type="text" class="form-control mr-auto p-2" name="direccion" id="direccion" #direccion="ngModel"
+        [(ngModel)]="model.direccion">
     </div>
     <div class="form-group d-flex">
       <div class="label">
-        <label for="Club">Club de Running:</label></div>
-      <input type="text" class="form-control mr-auto p-2" name="Club" id="Club">
+        <label class="p-2" for="runningClub">Club de Running:</label></div>
+      <input type="text" class="form-control mr-auto p-2" name="runningClub" id="runningClub" #runningClub="ngModel"
+        [(ngModel)]="model.runningClub">
     </div>
     <div class="form-group d-flex">
       <div class="label">
-        <label for="Talla">Talla de camiseta:</label></div>
-      <select class="form-control mr-auto p-2" name="Talla" id="Talla" required>
+        <label class="p-2" for="size">Talla de camiseta:</label></div>
+      <select class="form-control mr-auto p-2" name="size" id="size" required #size="ngModel" required
+        [(ngModel)]="model.size">
         <option *ngFor="let Talla of Tallas" [value]="Talla">{{Talla}}</option>
       </select>
     </div>
     <div class="form-group d-flex">
       <div class="label">
-        <label for="MetodoPago">Método de pago:</label>
+        <label class="p-2" for="MetodoPago">Método de pago:</label>
       </div>
-      <select class="form-control mr-auto p-2" name="MetodoPago" id="MetodoPago" required>
+      <select class="form-control mr-auto p-2" name="MetodoPago" id="MetodoPago" required #payMode="ngModel"
+        [(ngModel)]="model.payMode">
         <option *ngFor="let Metodo of Metodos" [value]="Metodo">{{Metodo}}</option>
       </select>
     </div>
     <div id="botones">
-      <button type="submit" class="btn btn-success">Volver</button>
-      <button type="submit" class="btn btn-success">Enviar</button>
+      <p>¿No tienes cuenta? <a href="">Registrate aquí</a></p>
+        <button type="submit" class="btn btn-success">Volver</button>
+        <button type="submit" class="btn btn-success">Enviar</button>
     </div>
   </form>
 </div>

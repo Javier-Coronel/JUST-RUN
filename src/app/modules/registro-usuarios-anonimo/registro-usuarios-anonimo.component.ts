@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Person } from './registro.model';
 
 @Component({
   selector: 'app-registro-usuarios-anonimo',
@@ -9,5 +10,6 @@ export class RegistroUsuariosAnonimoComponent {
   Tallas=['XS','S','M','L','XL'];
   Metodos=['Tarjeta','Paypal','Transferencia']
   submitted=false;
+  model= new Person(1,"","","","","","","");
   onSubmit(){this.submitted=true;}
 }
