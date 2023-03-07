@@ -9,7 +9,7 @@
             <mat-button-toggle class="w-25">Fecha</mat-button-toggle>
         </mat-button-toggle-group>
         <div class="events-list row p-3 mb-3">
-            <app-event-card *ngFor="let number of [].constructor(8)" class="event-card m-auto"></app-event-card> 
+            <app-event-card [evento]="evento" *ngFor="let evento of eventos" class="event-card m-auto"></app-event-card> 
         </div>
 
 </div>
