@@ -12,10 +12,10 @@ const routes: Routes = [
     component: SkeletonComponent,
     pathMatch: 'prefix',
     children:[
-      { path: '', component: HomeComponent },
-      { path: 'register', component: RegistrationComponent },
-      {path: 'login', component: LoginComponent },
-      {path: 'registerAnUser', component: RegistroUsuariosAnonimoComponent }
+      { path: '/', component: HomeComponent },
+      { path: '/register', component: RegistrationComponent },
+      {path: '/login', component: LoginComponent },
+      {path: '/registerAnUser', component: RegistroUsuariosAnonimoComponent }
     ]
   }
 ];
